@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบฟอร์มลงชื่อ</title>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .signup-container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        width: 400px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: none;
+        height: 80px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #4facfe;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #007bff;
+    }
+</style>
+</head>
+<body>
+
+<div class="signup-container">
+    <h2>สมัครสมาชิก</h2>
+    <form action="#" method="post">
+
+        <!-- Text Box -->
+        <div class="form-group">
+            <label>ชื่อ-นามสกุล</label>
+            <input type="text" name="fullname" placeholder="กรอกชื่อ-นามสกุล" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="อย่างน้อย 6 ตัวอักษร" minlength="6" required>
+        </div>
+
+        <!-- Radio Button -->
+        <div class="form-group">
+            <label>เพศ</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="ชาย" required> ชาย</label>
+                <label><input type="radio" name="gender" value="หญิง"> หญิง</label>
+                <label><input type="radio" name="gender" value="อื่น ๆ"> อื่น ๆ</label>
+            </div>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-group">
+            <label>ความสนใจ</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interest" value="กีฬา"> กีฬา</label>
+                <label><input type="checkbox" name="interest" value="ดนตรี"> ดนตรี</label>
+                <label><input type="checkbox" name="interest" value="เทคโนโลยี"> เทคโนโลยี</label>
+            </div>
+        </div>
+
+        <!-- Select -->
+        <div class="form-group">
+            <label>จังหวัด</label>
+            <select name="province" required>
+                <option value="">-- เลือกจังหวัด --</option>
+                <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                <option value="ขอนแก่น">ขอนแก่น</option>
+                <option value="เชียงใหม่">เชียงใหม่</option>
+                <option value="นครราชสีมา">นครราชสีมา</option>
+            </select>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label>แนะนำตัว</label>
+            <textarea name="about" placeholder="เขียนเกี่ยวกับตัวคุณ"></textarea>
+        </div>
+
+        <!-- Terms Checkbox -->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" required> ยอมรับเงื่อนไขการใช้งาน
+            </label>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">ลงชื่อ</button>
+
+    </form>
+</div>
+
+</body>
+</html>
